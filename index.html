@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invisible Cloud | Migration Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div>
+            <h1>☁ Invisible Cloud</h1>
+            <p>Intelligent Cross-Cloud Migration Platform</p>
+        </div>
+        <div class="connection">
+            <span class="dot"></span>
+            <span id="connectionStatus">Connecting...</span>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <div>
+                <p class="eyebrow">CLOUD MANAGEMENT</p>
+                <h2>Monitoring Dashboard</h2>
+                <p>Monitor workload performance and manage cloud migration.</p>
+            </div>
+            <div class="active-cloud">
+                <span>ACTIVE CLOUD</span>
+                <h2 id="activeCloud">AWS</h2>
+                <span id="systemStatus">Checking status...</span>
+            </div>
+        </section>
+
+        <section class="metrics">
+            <div class="metric-card">
+                <p>CPU Utilization</p>
+                <h2 id="cpu">--%</h2>
+                <div class="progress">
+                    <div id="cpuBar" class="bar"></div>
+                </div>
+            </div>
+
+            <div class="metric-card">
+                <p>Memory Utilization</p>
+                <h2 id="memory">--%</h2>
+                <div class="progress">
+                    <div id="memoryBar" class="bar"></div>
+                </div>
+            </div>
+
+            <div class="metric-card">
+                <p>Network Latency</p>
+                <h2 id="latency">-- ms</h2>
+                <p class="hint">Lower latency is better</p>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Cloud Migration Control</h2>
+            <p>Test performance degradation and the migration decision.</p>
+
+            <div class="buttons">
+                <button class="warning" onclick="simulateLoad()">
+                    Simulate High Load
+                </button>
+                <button class="primary" onclick="migrateCloud()">
+                    Migrate Workload
+                </button>
+                <button class="secondary" onclick="resetDemo()">
+                    Reset Demo
+                </button>
+            </div>
+
+            <p id="actionMessage" class="message">
+                Waiting for cloud metrics...
+            </p>
+        </section>
+
+        <section class="panel">
+            <div class="section-heading">
+                <h2>Migration Activity</h2>
+                <button class="secondary" onclick="loadLogs()">Refresh Logs</button>
+            </div>
+            <ul id="logs" class="logs">
+                <li>Waiting for backend connection...</li>
+            </ul>
+        </section>
+
+        <p class="note">
+            Academic prototype: cloud metrics and migration actions are
+            simulated. No real cloud workload is moved at this stage.
+        </p>
+
+    </main>
+
+    <footer>
+        Invisible Cloud Migration | Cloud Computing Project
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
