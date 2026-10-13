@@ -1,4 +1,4 @@
-const API = "https://administrative-kate-jacob-historic.trycloudflare.com";
+const API = "https://prague-utc-its-dec.trycloudflare.com";
 
 async function apiRequest(path, method = "GET") {
     const response = await fetch(API + path, { method });
